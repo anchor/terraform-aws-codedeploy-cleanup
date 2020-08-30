@@ -8,7 +8,7 @@ resource "aws_lambda_function" "codedeploy_cleanup" {
   source_code_hash = data.archive_file.codedeploy_cleanup.output_base64sha256
   filename         = data.archive_file.codedeploy_cleanup.output_path
   layers = [
-    "arn:aws:lambda:${data.aws_region.current.name}:770693421928:layer:Klayers-python38-pytz:1"
+    "arn:aws:lambda:${data.aws_region.current.name}:770693421928:layer:Klayers-python38-pytz:2"
   ]
   reserved_concurrent_executions = var.reserved_concurrent_executions
   environment {
